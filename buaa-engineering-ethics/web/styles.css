@@ -17,3 +17,5 @@
 @media(max-width:360px){.overview>div{padding:0 8px}.overview>div:first-child{padding-left:0}.overview>div:last-child{padding-right:0}.overview strong{font-size:22px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media print{.site-header,.sidebar,.filter-panel,.result-actions,.mode-help,.pagination,.back-to-top,.question-footer,.bookmark-button,.sidebar-tip,#toast{display:none!important}body{background:#fff;color:#000}.layout{display:block;padding:0}.intro{padding:0 0 15px}.overview{display:none}.question-card{break-inside:avoid;box-shadow:none;padding:12px;border-color:#bbb}.option,.option-text{color:#000}.question-options{gap:2px}.answer-panel[hidden]{display:block!important}.page-footer{font-size:9px}}
+
+.home-link{font-size:12px;color:#69778d;white-space:nowrap}.home-link:hover{color:var(--blue)}@media(max-width:560px){.header-right .course-badge{display:none}.home-link{font-size:11px}}
