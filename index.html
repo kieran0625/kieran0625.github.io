@@ -3,105 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Kieran 的学术主页，介绍计算机视觉、显著性目标检测方向的项目实践，以及 AI 学习资源与开源工具。">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="Kieran 的学术主页：计算机视觉、显著性目标检测项目、AI 学习资源与开源工具。">
   <title>Kieran | 学术主页</title>
   <link rel="canonical" href="https://kieran0625.github.io/">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/home.css">
+  <script src="./assets/home.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <a data-zh="跳转到主要内容" data-en="Skip to content" class="skip-link" href="#main">跳转到主要内容</a>
   <header class="site-header">
     <div class="header-inner wrap">
-      <a class="wordmark" href="./" aria-label="Kieran 学术主页">Kieran<span class="wordmark-detail"> / Academic Homepage</span></a>
-      <nav aria-label="主导航">
-        <a href="#about">关于</a>
-        <a href="#research">研究</a>
-        <a href="#projects">项目</a>
-        <a href="#resources">资源</a>
+      <a class="brand" href="./" aria-label="Kieran 首页">
+        <img src="./assets/favicon.svg" width="32" height="32" alt="">
+        <span>Kieran</span>
+        <small data-zh="学术主页" data-en="Academic Homepage">学术主页</small>
+      </a>
+      <nav aria-label="主导航" data-aria-zh="主导航" data-aria-en="Main navigation">
+        <a data-zh="简介" data-en="About" href="#about">简介</a>
+        <a data-zh="研究方向" data-en="Research" href="#research">研究方向</a>
+        <a data-zh="项目" data-en="Projects" href="#projects">项目</a>
+        <a data-zh="资源" data-en="Resources" href="#resources">资源</a>
+        <a data-zh="联系" data-en="Contact" href="#contact">联系</a>
       </nav>
+      <div class="header-tools">
+        <button type="button" id="language-toggle" class="icon-button language-toggle" aria-label="Switch to English" hidden>EN</button>
+        <button type="button" id="theme-toggle" class="icon-button" aria-label="切换深色模式" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <div class="page-layout wrap">
-    <aside class="profile" aria-labelledby="profile-name">
-      <div class="profile-heading">
-        <img class="profile-photo" src="./assets/profile.png" alt="Kieran 的 GitHub 头像" width="160" height="160" fetchpriority="high">
-        <div class="profile-identity">
-          <h1 id="profile-name">Kieran</h1>
-          <p class="profile-field">计算机视觉 · 人工智能</p>
-          <p class="profile-field-en" lang="en">Computer Vision &amp; AI</p>
-          <a class="profile-github" href="https://github.com/kieran0625">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.82c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.72.4-1.22.71-1.5-2.5-.29-5.12-1.25-5.12-5.54 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.54.23 2.68.11 2.96.73.78 1.16 1.78 1.16 3 0 4.3-2.63 5.25-5.13 5.53.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
-            <span>GitHub <span class="handle">@kieran0625</span></span>
-          </a>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="hero">
+      <div class="hero-copy">
+        <p data-zh="个人学术主页" data-en="Academic Homepage" class="eyebrow">个人学术主页</p>
+        <h1 class="serif">Kieran<span class="name-subtitle" lang="en">Computer Vision &amp; AI</span></h1>
+        <p data-zh="关注计算机视觉与人工智能，围绕显著性目标检测开展项目实践，并整理开放的学习资源与工具。" data-en="I explore computer vision and artificial intelligence through projects in salient object detection, open learning resources, and practical tools." class="hero-description">关注计算机视觉与人工智能，围绕显著性目标检测开展项目实践，并整理开放的学习资源与工具。</p>
+        <ul class="chips" aria-label="研究关键词" data-aria-zh="研究关键词" data-aria-en="Research keywords">
+          <li data-zh="计算机视觉" data-en="Computer Vision">计算机视觉</li>
+          <li data-zh="显著性目标检测" data-en="Salient Object Detection">显著性目标检测</li>
+          <li data-zh="AI 工程" data-en="AI Engineering">AI 工程</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button primary" href="#research"><span data-zh="了解我的研究" data-en="Explore my research">了解我的研究</span> <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="https://github.com/kieran0625">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="profile-details">
-        <section class="interests" aria-labelledby="interests-heading">
-          <h2 id="interests-heading">研究兴趣</h2>
-          <ul>
-            <li>计算机视觉<span lang="en">Computer Vision</span></li>
-            <li>显著性目标检测<span lang="en">Salient Object Detection</span></li>
-            <li>AI 工程实践<span lang="en">AI Engineering</span></li>
-          </ul>
-        </section>
-        <a class="sidebar-link" href="https://github.com/kieran0625?tab=repositories">全部公开代码 <span aria-hidden="true">↗</span></a>
+      <figure class="portrait">
+        <img class="profile-photo" src="./assets/profile.png" alt="Kieran 的 GitHub 头像" data-alt-zh="Kieran 的 GitHub 头像" data-alt-en="Kieran's GitHub avatar" width="320" height="320" fetchpriority="high">
+        <figcaption>@kieran0625</figcaption>
+      </figure>
+    </div>
+
+    <div class="contact-strip">
+      <div><span class="strip-label">GitHub</span><a href="https://github.com/kieran0625">github.com/kieran0625 <span aria-hidden="true">↗</span></a></div>
+      <div><span data-zh="公开代码" data-en="Code" class="strip-label">公开代码</span><a href="https://github.com/kieran0625?tab=repositories"><span data-zh="项目仓库" data-en="Repositories">项目仓库</span> <span aria-hidden="true">↗</span></a></div>
+      <div><span data-zh="在线工具" data-en="Tool" class="strip-label">在线工具</span><a href="https://kieran0625.github.io/buaa-engineering-ethics/"><span data-zh="工程伦理习题库" data-en="Engineering Ethics">工程伦理习题库</span> <span aria-hidden="true">↗</span></a></div>
+    </div>
+
+    <section id="about" class="content-section" aria-labelledby="about-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">01</span><h2 data-zh="个人简介" data-en="About" id="about-heading" class="serif">个人简介</h2></div>
+      <div class="card about-card">
+        <p data-zh="你好，我是 Kieran。我关注计算机视觉与人工智能。我的毕业设计使用 PFA-Net 实现显著性目标检测，围绕图像中的显著区域识别开展项目实践。" data-en="Hello, I’m Kieran. My interests are in computer vision and artificial intelligence. My graduation project uses PFA-Net for salient object detection, exploring how to identify salient regions in images.">你好，我是 Kieran。我关注计算机视觉与人工智能。我的毕业设计使用 PFA-Net 实现显著性目标检测，围绕图像中的显著区域识别开展项目实践。</p>
+        <p data-zh="这个网站汇集我的研究项目、开源工具与学习资料。除视觉方向的项目外，我也整理了工程伦理习题库，方便在手机或电脑上检索、练习和复习。" data-en="This website brings together my research projects, open-source tools, and learning resources. Alongside my computer vision work, I maintain an engineering ethics question bank for studying and practising on mobile and desktop.">这个网站汇集我的研究项目、开源工具与学习资料。除视觉方向的项目外，我也整理了工程伦理习题库，方便在手机或电脑上检索、练习和复习。</p>
       </div>
-    </aside>
+    </section>
 
-    <main id="main" tabindex="-1">
-      <section id="about" class="content-section about" aria-labelledby="about-heading">
-        <div class="section-heading"><h2 id="about-heading">关于我</h2><span lang="en">About</span></div>
-        <p>你好，我是 Kieran。我关注<strong>计算机视觉与人工智能</strong>，通过项目实践探索视觉理解与 AI 应用。</p>
-        <p>我的毕业设计使用 <strong>PFA-Net</strong> 实现显著性目标检测。这里汇集我的研究项目、开源工具与学习资料，相关代码可在 <a href="https://github.com/kieran0625">GitHub</a> 查看。</p>
-        <div class="news-note"><span class="news-label">近期更新</span><time datetime="2026-10">2026.10</time><p><a href="https://kieran0625.github.io/buaa-engineering-ethics/">工程伦理习题库</a>独立上线，涵盖 15 讲、303 道习题。</p></div>
-      </section>
-
-      <section id="research" class="content-section" aria-labelledby="research-heading">
-        <div class="section-heading"><h2 id="research-heading">研究项目</h2><span lang="en">Research</span></div>
-        <article class="research-entry">
-          <p class="entry-category">计算机视觉 <span aria-hidden="true">/</span> 毕业设计</p>
-          <h3>基于 PFA-Net 的显著性目标检测</h3>
-          <p class="entry-subtitle" lang="en">Salient Object Detection with PFA-Net</p>
-          <p class="entry-description">围绕图像中的显著区域识别，使用 PFA-Net 开展显著性目标检测的毕业设计实践。</p>
-          <div class="entry-footer">
-            <ul class="keywords" aria-label="研究关键词"><li>Computer Vision</li><li>Saliency Detection</li></ul>
-            <a class="text-link" href="https://github.com/kieran0625/Kieran-s-Graguation_Design-SOD">项目代码 <span aria-hidden="true">↗</span></a>
-          </div>
+    <section id="research" class="content-section" aria-labelledby="research-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">02</span><h2 data-zh="研究方向" data-en="Research Interests" id="research-heading" class="serif">研究方向</h2></div>
+      <div class="research-grid">
+        <article class="interest-card">
+          <span class="research-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V4h4m10 0h4v4M3 16v4h4m10 0h4v-4"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span>
+          <h3 data-zh="计算机视觉" data-en="Computer Vision">计算机视觉</h3>
+          <p data-zh="关注图像中的视觉信息与区域特征，通过模型与项目实践探索视觉理解。" data-en="Exploring visual information and regional features in images through models and practical projects.">关注图像中的视觉信息与区域特征，通过模型与项目实践探索视觉理解。</p>
         </article>
-      </section>
-
-      <section id="projects" class="content-section" aria-labelledby="projects-heading">
-        <div class="section-heading"><h2 id="projects-heading">开源与工具</h2><span lang="en">Open Source</span></div>
-        <article class="tool-entry">
-          <div class="tool-heading"><h3>工程伦理习题库</h3><span class="status"><span aria-hidden="true"></span>在线可用</span></div>
-          <p class="entry-description">整理第 1–15 讲共 303 道习题，支持章节检索、背题与练习、错题复习和收藏。适配手机与电脑，学习记录保存在本机。</p>
-          <div class="tool-links">
-            <a class="text-link featured-project" href="https://kieran0625.github.io/buaa-engineering-ethics/">打开题库 <span aria-hidden="true">↗</span></a>
-            <a class="text-link secondary-link" href="https://github.com/kieran0625/buaa-engineering-ethics">源代码 <span aria-hidden="true">↗</span></a>
-          </div>
+        <article class="interest-card">
+          <span class="research-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m12 12 8-8M16 4h4v4"/></svg></span>
+          <h3 data-zh="显著性目标检测" data-en="Salient Object Detection">显著性目标检测</h3>
+          <p data-zh="围绕显著区域识别，使用 PFA-Net 开展显著性目标检测的毕业设计实践。" data-en="Using PFA-Net to identify salient image regions as part of my graduation project.">围绕显著区域识别，使用 PFA-Net 开展显著性目标检测的毕业设计实践。</p>
         </article>
-      </section>
+        <article class="interest-card">
+          <span class="research-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 3v4m6-4v4M9 17v4m6-4v4M3 9h4m-4 6h4m10-6h4m-4 6h4"/><path d="m10 13 2-3 2 3"/></svg></span>
+          <h3 data-zh="AI 工程实践" data-en="AI Engineering">AI 工程实践</h3>
+          <p data-zh="结合开源课程和实际项目学习人工智能，将学习资料整理成可用的工具。" data-en="Learning AI through open-source courses and projects, and turning study materials into useful tools.">结合开源课程和实际项目学习人工智能，将学习资料整理成可用的工具。</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="resources" class="content-section" aria-labelledby="resources-heading">
-        <div class="section-heading"><h2 id="resources-heading">学习资源</h2><span lang="en">Learning</span></div>
-        <p class="section-intro">收藏并持续学习的开源课程，以下仓库均为 Fork。</p>
+    <section id="projects" class="content-section" aria-labelledby="projects-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">03</span><h2 data-zh="项目与开源" data-en="Projects &amp; Open Source" id="projects-heading" class="serif">项目与开源</h2></div>
+      <div class="card">
+        <div class="project-timeline">
+          <article class="project-entry">
+            <p data-zh="毕业设计 · 计算机视觉" data-en="Graduation Project · Computer Vision" class="entry-category">毕业设计 · 计算机视觉</p>
+            <h3 data-zh="基于 PFA-Net 的显著性目标检测" data-en="Salient Object Detection with PFA-Net" class="serif">基于 PFA-Net 的显著性目标检测</h3>
+            <p data-zh="使用 PFA-Net 实现显著性目标检测，探索图像中的显著区域识别。" data-en="Implementing salient object detection with PFA-Net to explore salient region identification in images." class="entry-description">使用 PFA-Net 实现显著性目标检测，探索图像中的显著区域识别。</p>
+            <a class="text-link" href="https://github.com/kieran0625/Kieran-s-Graguation_Design-SOD"><span data-zh="查看项目代码" data-en="View project code">查看项目代码</span> <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-entry">
+            <p data-zh="开源工具 · 在线学习" data-en="Open-source Tool · Learning" class="entry-category">开源工具 · 在线学习</p>
+            <h3 data-zh="工程伦理习题库" data-en="Engineering Ethics Question Bank" class="serif">工程伦理习题库</h3>
+            <p data-zh="涵盖第 1–15 讲共 303 道习题，支持章节筛选、背题与练习、错题复习和收藏。适配手机与电脑，学习记录保存在本机。" data-en="303 questions across 15 chapters, with chapter filters, study and practice modes, mistake review, and bookmarks. Works on mobile and desktop, with progress saved locally." class="entry-description">涵盖第 1–15 讲共 303 道习题，支持章节筛选、背题与练习、错题复习和收藏。适配手机与电脑，学习记录保存在本机。</p>
+            <div class="project-links">
+              <a class="text-link featured-project" href="https://kieran0625.github.io/buaa-engineering-ethics/"><span data-zh="打开题库" data-en="Open question bank">打开题库</span> <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/kieran0625/buaa-engineering-ethics"><span data-zh="源代码" data-en="Source code">源代码</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="content-section" aria-labelledby="resources-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">04</span><h2 data-zh="学习资源" data-en="Learning Resources" id="resources-heading" class="serif">学习资源</h2></div>
+      <div class="card">
+        <p data-zh="收藏并持续学习的开源课程，以下仓库均为 Fork。" data-en="Open-source courses I follow and learn from. The repositories below are forks." class="muted-note">收藏并持续学习的开源课程，以下仓库均为 Fork。</p>
         <ul class="resource-list">
-          <li>
-            <div><h3><a href="https://github.com/kieran0625/ai-engineering-from-scratch">AI Engineering from Scratch <span aria-hidden="true">↗</span></a></h3><p>从基础知识到项目实践的 AI 工程学习资料。</p></div>
-            <span class="resource-type">Fork</span>
-          </li>
-          <li>
-            <div><h3><a href="https://github.com/kieran0625/AI-For-Beginners">AI for Beginners <span aria-hidden="true">↗</span></a></h3><p>微软开源人工智能入门课程，配套课程内容与 Notebook。</p></div>
-            <span class="resource-type">Fork</span>
-          </li>
+          <li><div><h3><a href="https://github.com/kieran0625/ai-engineering-from-scratch">AI Engineering from Scratch <span aria-hidden="true">↗</span></a></h3><p data-zh="从基础知识到项目实践的 AI 工程学习资料。" data-en="AI engineering resources, from fundamentals to hands-on projects.">从基础知识到项目实践的 AI 工程学习资料。</p></div><span class="resource-type">Fork</span></li>
+          <li><div><h3><a href="https://github.com/kieran0625/AI-For-Beginners">AI for Beginners <span aria-hidden="true">↗</span></a></h3><p data-zh="微软开源人工智能入门课程，配套课程内容与 Notebook。" data-en="Microsoft’s introductory AI curriculum, with lessons and accompanying notebooks.">微软开源人工智能入门课程，配套课程内容与 Notebook。</p></div><span class="resource-type">Fork</span></li>
         </ul>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
 
-  <footer class="site-footer wrap"><span>© 2026 Kieran</span><a href="https://github.com/kieran0625/kieran0625.github.io">本站源码 <span aria-hidden="true">↗</span></a></footer>
+    <section id="contact" class="content-section" aria-labelledby="contact-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">05</span><h2 data-zh="联系与链接" data-en="Contact &amp; Links" id="contact-heading" class="serif">联系与链接</h2></div>
+      <div class="card contact-card">
+        <div><span class="contact-label">GitHub</span><a href="https://github.com/kieran0625">github.com/kieran0625 <span aria-hidden="true">↗</span></a></div>
+        <div><span data-zh="个人网站" data-en="Website" class="contact-label">个人网站</span><a href="https://kieran0625.github.io/">kieran0625.github.io <span aria-hidden="true">↗</span></a></div>
+        <p data-zh="项目代码、学习资料与后续更新，均可通过我的 GitHub 查看。" data-en="Find my project code, learning resources, and future updates on GitHub." class="muted-note">项目代码、学习资料与后续更新，均可通过我的 GitHub 查看。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <span>© 2026 Kieran</span>
+    <div><span data-zh="更新于 2026 年 10 月" data-en="Updated October 2026">更新于 2026 年 10 月</span><a href="https://github.com/kieran0625/kieran0625.github.io"><span data-zh="本站源码" data-en="Website source">本站源码</span> <span aria-hidden="true">↗</span></a></div>
+  </footer>
 </body>
 </html>
